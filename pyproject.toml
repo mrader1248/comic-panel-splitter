@@ -8,7 +8,21 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
+click = "^8.1.7"
+rarfile = "^4.1"
+pillow = "^10.1.0"
+loguru = "^0.7.2"
+tqdm = "^4.66.1"
 
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+ipython = "^8.19.0"
+matplotlib = "^3.8.2"
+
+[tool.poetry.scripts]
+comic-panel-splitter = "comic_panel_splitter.main:main"
 
 [build-system]
 requires = ["poetry-core"]
